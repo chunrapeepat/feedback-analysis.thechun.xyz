@@ -1,7 +1,7 @@
 import React, {Component} from 'react'
 import styled from 'styled-components'
 
-import {Card} from './Card'
+import {Card, EmptyCard} from './Card'
 import {Container, fonts, fontSize, colors, media} from '../core/styled'
 
 const AppContainer = styled.div`
@@ -35,6 +35,7 @@ class App extends Component {
           <Card></Card>
           <Card></Card>
           <Card></Card>
+          <EmptyCard></EmptyCard>
         </Grid>
       </Container>
     </AppContainer>

@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 
-import {Container, fonts, fontSize, colors} from '../core/styled'
+import {Container, fonts, fontSize, colors, media} from '../core/styled'
 
 const FooterContainer = styled.div`
   font-family: ${fonts.header};
@@ -10,6 +10,10 @@ const FooterContainer = styled.div`
   background: white;
   width: 100vw;
   padding: 10px 0;
+
+  ${media.tablet`
+    padding-top: 30px;
+  `}
 `
 
 export default () => (
