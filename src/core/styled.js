@@ -8,6 +8,7 @@ export const fonts = {
 
 export const fontSize = {
   normal: 1.1,
+  subheader: 1.5,
   header: 2,
 }
 
@@ -18,7 +19,7 @@ export const colors = {
 // all helper function
 const sizes = {
   screen: 1680,
-  desktop: 1170,
+  desktop: 1200,
   tablet: 600,
   phone: 376,
 }

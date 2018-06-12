@@ -2,6 +2,7 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import styled, {injectGlobal} from 'styled-components'
 
+import Application from './components/App'
 import Header from './components/Header'
 import Footer from './components/Footer'
 import {media} from './core/styled'
@@ -30,6 +31,7 @@ const App = () => (
   <div>
     <Wrapper>
       <Header />
+      <Application />
     </Wrapper>
     <Footer />
   </div>
