@@ -7,10 +7,8 @@ const FooterContainer = styled.div`
   font-family: ${fonts.header};
   font-size: ${fontSize.normal}rem;
   color: ${colors.content};
-  position: fixed;
   background: white;
   width: 100vw;
-  bottom: 0;
   padding: 10px 0;
 `
 
