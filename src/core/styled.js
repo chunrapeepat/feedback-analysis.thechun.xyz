@@ -7,7 +7,7 @@ export const fonts = {
 }
 
 export const fontSize = {
-  normal: 1,
+  normal: 1.1,
   header: 2,
 }
 

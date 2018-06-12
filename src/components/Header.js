@@ -46,6 +46,7 @@ const TheChun = styled.a`
 const Quote = styled.span`
   display: block;
   color: ${colors.content};
+  font-size: ${fontSize.normal}rem;
   font-family: ${fonts.normal};
 `
 
