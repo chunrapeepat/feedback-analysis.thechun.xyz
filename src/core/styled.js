@@ -8,17 +8,17 @@ export const fonts = {
 
 export const fontSize = {
   normal: 1,
+  header: 2,
 }
 
 export const colors = {
-  main: '#333',
   content: '#555',
 }
 
 // all helper function
 const sizes = {
-  giant: 1170,
-  desktop: 1000,
+  screen: 1680,
+  desktop: 1170,
   tablet: 600,
   phone: 376,
 }
@@ -36,16 +36,21 @@ export const media = Object.keys(sizes).reduce((accumulator, label) => {
 
 // all helper components
 export const Container = styled.div`
-  width: ${sizes.desktop}px;
+  width: ${sizes.screen}px;
   margin: auto auto;
-  ${props => props['with-margin'] ? `
-    margin-top: 20px;
-  ` : ''}
-  ${props => props.relative ? `
-    position: relative;
-  ` : ``}
+
+  ${media.screen`
+    width: auto;
+    margin: 0 30px;
+  `}
+
   ${media.desktop`
-    width: 100%;
-    padding: 0 10px;
+    width: auto;
+    margin: 0 20px;
+  `}
+
+  ${media.tablet`
+    width: auto;
+    margin: 0 10px;
   `}
 `
