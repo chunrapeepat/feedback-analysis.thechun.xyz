@@ -12,12 +12,12 @@ const guid = () => {
 }
 
 // get item from localStorage
-const get = () => {
+export const get = () => {
   return JSON.parse(localStorage.getItem(key))
 }
 
 // set item to localStorage
-const set = obj => {
+export const set = obj => {
   localStorage.setItem(key, JSON.stringify(obj))
 }
 

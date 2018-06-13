@@ -1,6 +1,7 @@
 import React, {Component} from 'react'
 import styled from 'styled-components'
 
+import ReviewModal from './ReviewModal'
 import {Container, fonts, fontSize, colors, media} from '../core/styled'
 
 const CardContainer = styled.div`
@@ -66,19 +67,36 @@ const Review = styled.span`
   }
 `
 
-export const Card = ({...props, review}) => (
-  <CardContainer {...props}>
-    <Header>Stupid Hackathon #2</Header>
-    <Countdown>
-      {review &&
-        <Review><i className="zmdi zmdi-check-circle"></i> Already reviewed</Review>
-      }
-      {!review &&
-        <span>251 days left</span>
-      }
-    </Countdown>
-  </CardContainer>
-)
+export default class Card extends Component {
+  datetimeFormat = (dateString) => {
+    const date = new Date(dateString)
+    const diff = Math.floor((date.getTime() - Date.now()) / (1000 * 60 * 60 * 24))
+    if (diff == 0) {
+      return `today`
+    }
+    if (diff < 0) {
+      return `you can review it now`
+    }
+    return `${diff} day${diff == 1 ? '' : 's'} left`
+  }
+
+  render = () => {
+    const data = this.props.data
+    return (
+      <CardContainer>
+        <Header>{data.name}</Header>
+        <Countdown>
+          {data.isReview &&
+            <Review><i className="zmdi zmdi-check-circle"></i> Already reviewed</Review>
+          }
+          {!data.isReview &&
+            <span>{this.datetimeFormat(data.reviewDate)}</span>
+          }
+        </Countdown>
+      </CardContainer>
+    )
+  }
+}
 
 export const EmptyCard = ({...props}) => (
   <EmptyCardContainer {...props}>
