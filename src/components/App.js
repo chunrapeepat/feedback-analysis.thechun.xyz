@@ -1,6 +1,7 @@
 import React, {Component} from 'react'
 import styled from 'styled-components'
 
+import CreateNewModal from './CreateNewModal'
 import {Card, EmptyCard} from './Card'
 import {Container, fonts, fontSize, colors, media} from '../core/styled'
 
@@ -27,15 +28,20 @@ const Grid = styled.div`
 `
 
 class App extends Component {
+  state = {
+    visible: false,
+  }
+
   render = () => (
     <AppContainer>
+      <CreateNewModal visible={this.state.visible}/>
       <Container>
         <Grid>
           <Card></Card>
           <Card></Card>
           <Card></Card>
           <Card></Card>
-          <EmptyCard></EmptyCard>
+          <EmptyCard onClick={() => this.setState({visible: true})}/>
         </Grid>
       </Container>
     </AppContainer>

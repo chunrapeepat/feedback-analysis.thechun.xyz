@@ -8,6 +8,8 @@ import Footer from './components/Footer'
 import {media} from './core/styled'
 import registerServiceWorker from './registerServiceWorker'
 
+import 'antd/dist/antd.css'
+
 // global style belong here
 injectGlobal`
   body {

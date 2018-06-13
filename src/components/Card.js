@@ -58,16 +58,16 @@ const Countdown = styled.div`
   color: ${colors.content};
 `
 
-export const Card = () => (
-  <CardContainer>
+export const Card = ({...props}) => (
+  <CardContainer {...props}>
     <Header>Stupid Hackathon #2</Header>
     <Countdown>251 days left</Countdown>
   </CardContainer>
 )
 
-export const EmptyCard = () => (
-  <EmptyCardContainer>
+export const EmptyCard = ({...props}) => (
+  <EmptyCardContainer {...props}>
     <i className="zmdi zmdi-plus-circle-o"></i>
-    <span>Create new item</span>
+    <span>New Assumption</span>
   </EmptyCardContainer>
 )
