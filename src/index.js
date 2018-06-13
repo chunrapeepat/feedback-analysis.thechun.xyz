@@ -6,6 +6,7 @@ import Application from './components/App'
 import Header from './components/Header'
 import Footer from './components/Footer'
 import {media} from './core/styled'
+import {init} from './core/helper'
 import registerServiceWorker from './registerServiceWorker'
 
 import 'antd/dist/antd.css'
@@ -38,6 +39,9 @@ const App = () => (
     <Footer />
   </div>
 )
+
+// initialize local storage
+init()
 
 ReactDOM.render(<App />, document.getElementById('root'));
 registerServiceWorker();
