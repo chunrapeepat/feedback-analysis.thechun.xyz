@@ -42,6 +42,7 @@ export const addItem = (name, assumption, days) => {
     reviewDate,
     conclusion: '',
     isReview: false,
+    createdAt: new Date,
   }
   // append and save to localStorage
   set([newItem, ...items])

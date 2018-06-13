@@ -111,7 +111,7 @@ export default class extends Component {
         <Modal
           width={700}
           visible={this.state.visible}
-          title={(<Header>{data.name}</Header>)}
+          title={(<Header>{data.name} ({(new Date(data.createdAt)).toISOString().slice(0, 10)})</Header>)}
           onOk={this.handleOk}
           onCancel={this.handleCancel}
           footer={[
@@ -123,7 +123,6 @@ export default class extends Component {
               Review
             </Button>,
           ]}>
-
             <Pre>
               {data.assumption}
             </Pre>
