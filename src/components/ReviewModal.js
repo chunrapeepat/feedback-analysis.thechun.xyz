@@ -16,6 +16,13 @@ const Header = styled.h1`
   transform: translateY(5px);
 `
 
+const Pre = styled.pre`
+  font-family: ${fonts.normal};
+  background: #fafafa;
+  border-radius: 5px;
+  padding: 10px;
+`
+
 const initialState = {
   visible: false,
   loadingRemove: false,
@@ -117,9 +124,9 @@ export default class extends Component {
             </Button>,
           ]}>
 
-            <pre>
+            <Pre>
               {data.assumption}
-            </pre>
+            </Pre>
 
             <TextArea
               value={this.state.concludeInput}

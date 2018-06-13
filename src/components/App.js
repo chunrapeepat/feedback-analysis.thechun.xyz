@@ -17,10 +17,10 @@ const AppContainer = styled.div`
 const Grid = styled.div`
   display: grid;
   grid-gap: 20px;
-  grid-template-columns: auto auto auto;
+  grid-template-columns: repeat(3, 1fr);
 
   ${media.desktop`
-    grid-template-columns: auto auto;
+    grid-template-columns: repeat(2, 1fr);
   `}
 
   ${media.tablet`
