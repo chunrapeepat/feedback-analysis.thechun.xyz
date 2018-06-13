@@ -1,8 +1,7 @@
 import React, {Component} from 'react'
 import styled from 'styled-components'
 
-import ReviewModal from './ReviewModal'
-import {Container, fonts, fontSize, colors, media} from '../core/styled'
+import {fonts, fontSize, colors} from '../core/styled'
 
 const CardContainer = styled.div`
   border-radius: 5px;
@@ -71,13 +70,13 @@ export default class Card extends Component {
   datetimeFormat = (dateString) => {
     const date = new Date(dateString)
     const diff = Math.floor((date.getTime() - Date.now()) / (1000 * 60 * 60 * 24))
-    if (diff == 0) {
+    if (diff === 0) {
       return `today`
     }
     if (diff < 0) {
       return `you can review it now`
     }
-    return `${diff} day${diff == 1 ? '' : 's'} left`
+    return `${diff} day${diff === 1 ? '' : 's'} left`
   }
 
   render = () => {

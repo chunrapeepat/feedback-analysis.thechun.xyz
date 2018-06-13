@@ -5,7 +5,6 @@ import styled, {injectGlobal} from 'styled-components'
 import Application from './components/App'
 import Header from './components/Header'
 import Footer from './components/Footer'
-import {media} from './core/styled'
 import {init} from './core/helper'
 import registerServiceWorker from './registerServiceWorker'
 

@@ -4,7 +4,7 @@ import styled from 'styled-components'
 import Card from './ReviewModal'
 import CreateNewModal from './CreateNewModal'
 import * as helper from '../core/helper'
-import {Container, fonts, fontSize, colors, media} from '../core/styled'
+import {Container, media} from '../core/styled'
 
 const AppContainer = styled.div`
   padding: 20px 0;

@@ -29,7 +29,7 @@ export default class extends Component {
 
   hasError = () => {
     const state = this.state
-    return state.nameInput == '' || state.assumptionInput == '' || state.daysInput == ''
+    return state.nameInput === '' || state.assumptionInput === '' || state.daysInput === ''
   }
 
   handleSubmit = () => {
@@ -43,7 +43,7 @@ export default class extends Component {
     }
     // save data to localStorage
     const state = this.state
-    helper.addItem(state.nameInput, state.assumptionInput, parseInt(state.daysInput))
+    helper.addItem(state.nameInput, state.assumptionInput, parseInt(state.daysInput, 10))
     // show notification
     notification['success']({
       message: 'Success!',

@@ -32,8 +32,8 @@ export const init = () => {
 export const addItem = (name, assumption, days) => {
   let items = get()
   // set new date
-  let reviewDate = new Date
-  reviewDate.setDate((new Date).getDate() + days)
+  let reviewDate = new Date()
+  reviewDate.setDate((new Date()).getDate() + days)
   // create new item
   const newItem = {
     id: guid(),
@@ -42,7 +42,7 @@ export const addItem = (name, assumption, days) => {
     reviewDate,
     conclusion: '',
     isReview: false,
-    createdAt: new Date,
+    createdAt: new Date(),
   }
   // append and save to localStorage
   set([newItem, ...items])
@@ -68,7 +68,7 @@ export const updateItem = (id, key, value) => {
 
 // remove item by id
 export const removeItem = id => {
-  let items = get().filter(item => item.id != id)
+  let items = get().filter(item => item.id !== id)
   // save
   set(items)
 }

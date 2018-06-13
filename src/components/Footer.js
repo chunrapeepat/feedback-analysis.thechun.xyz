@@ -46,9 +46,9 @@ export default () => (
     <Container>
       @2018 Feedback Analysis, The Chun Rapeepat production.
       <Link>
-        <a href="https://thechun.xyz/" target="_blank">TheChun.xyz</a><div/>
-        <a href="https://facebook.com/chun42" target="_blank">Facebook</a><div/>
-        <a href="https://github.com/chunza2542/feedback-analysis.thechun.xyz" target="_blank">Github</a>
+        <a rel="noopener noreferrer" href="https://thechun.xyz/" target="_blank">TheChun.xyz</a><div/>
+        <a rel="noopener noreferrer" href="https://facebook.com/chun42" target="_blank">Facebook</a><div/>
+        <a rel="noopener noreferrer" href="https://github.com/chunza2542/feedback-analysis.thechun.xyz" target="_blank">Github</a>
       </Link>
     </Container>
   </FooterContainer>
