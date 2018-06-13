@@ -12,25 +12,25 @@ const guid = () => {
 }
 
 // get item from localStorage
-const getItem = () => {
+const get = () => {
   return JSON.parse(localStorage.getItem(key))
 }
 
 // set item to localStorage
-const setItem = obj => {
+const set = obj => {
   localStorage.setItem(key, JSON.stringify(obj))
 }
 
 // initialize empty array to localStorage
 export const init = () => {
   if (localStorage.getItem(key) == null) {
-    setItem([])
+    set([])
   }
 }
 
 // add new item to localStorage
 export const addItem = (name, assumption, days) => {
-  let items = getItem()
+  let items = get()
   // set new date
   let reviewDate = new Date
   reviewDate.setDate((new Date).getDate() + days)
@@ -44,5 +44,24 @@ export const addItem = (name, assumption, days) => {
     isReview: false,
   }
   // append and save to localStorage
-  setItem([newItem, ...items])
+  set([newItem, ...items])
+}
+
+// get item by id
+export const getItem = id => {
+  let items = get()
+  return items.filter(item => item.id === id)[0]
+}
+
+// update key in localStorage
+export const updateItem = (id, key, value) => {
+  let items = get()
+  // update data
+  items = items.map(item => {
+    if (item.id === id) {
+      item[key] = value
+    }
+  })
+  // save
+  set(items)
 }
