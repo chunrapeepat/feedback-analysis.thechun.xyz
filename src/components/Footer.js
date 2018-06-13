@@ -16,10 +16,40 @@ const FooterContainer = styled.div`
   `}
 `
 
+const Link = styled.div`
+  & > a {
+    color: #777;
+    transition: 0s;
+  }
+
+  & > a:hover {
+    color: ${colors.content};
+    text-decoration: underline;
+  }
+
+  & div {
+    display: inline-block;
+    width: 5px;
+    height: 5px;
+    margin: 0 10px;
+    transform: translateY(-3px);
+    background: ${colors.content};
+  }
+
+  ${media.tablet`
+    margin-top: 10px;
+  `}
+`
+
 export default () => (
   <FooterContainer>
     <Container>
-      The Chun Rapeepat production 2018.
+      @2018 Feedback Analysis, The Chun Rapeepat production.
+      <Link>
+        <a href="https://thechun.xyz/" target="_blank">Thechun.xyz</a><div/>
+        <a href="https://facebook.com/chun42" target="_blank">Facebook</a><div/>
+        <a href="https://github.com/chunza2542/feedback-analysis.thechun.xyz" target="_blank">Github</a>
+      </Link>
     </Container>
   </FooterContainer>
 )

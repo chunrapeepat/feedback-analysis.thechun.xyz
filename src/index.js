@@ -22,7 +22,7 @@ injectGlobal`
 `
 
 const Wrapper = styled.div`
-  min-height: calc(100vh - 45px - 30px);
+  min-height: calc(100vh - 72px - 30px);
 
   &:after {
     content: '';
