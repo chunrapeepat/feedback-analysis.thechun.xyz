@@ -65,3 +65,10 @@ export const updateItem = (id, key, value) => {
   // save
   set(items)
 }
+
+// remove item by id
+export const removeItem = id => {
+  let items = get().filter(item => item.id != id)
+  // save
+  set(items)
+}
