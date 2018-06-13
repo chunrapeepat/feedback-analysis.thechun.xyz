@@ -49,9 +49,9 @@ export default class extends Component {
       message: 'Success!',
       description: 'New assumption has beed created.',
     })
-    // close modal and reset
+    // reload oage
     setTimeout(() => {
-      this.setState(initialState)
+      window.location.reload()
     }, 1500)
   }
 
@@ -98,7 +98,7 @@ export default class extends Component {
             style={{'marginTop': '10px'}}
             defaultValue="">
             <Option value="">how long you will back to conclude the result</Option>
-            <Option value="30">30 days - very-short-term goal</Option>
+            <Option value="0">30 days - very-short-term goal</Option>
             <Option value="50">50 days - short-term goal</Option>
             <Option value="150">150 days - medium-term goal</Option>
             <Option value="300">300 days - long-term goal</Option>

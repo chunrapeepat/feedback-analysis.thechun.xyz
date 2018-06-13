@@ -55,12 +55,11 @@ export const getItem = id => {
 
 // update key in localStorage
 export const updateItem = (id, key, value) => {
-  let items = get()
-  // update data
-  items = items.map(item => {
+  let items = get().map(item => {
     if (item.id === id) {
       item[key] = value
     }
+    return item
   })
   // save
   set(items)

@@ -83,7 +83,7 @@ export default class Card extends Component {
   render = () => {
     const data = this.props.data
     return (
-      <CardContainer>
+      <CardContainer onClick={this.props.onClick}>
         <Header>{data.name}</Header>
         <Countdown>
           {data.isReview &&

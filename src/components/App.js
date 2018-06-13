@@ -1,7 +1,7 @@
 import React, {Component} from 'react'
 import styled from 'styled-components'
 
-import Card from './Card'
+import Card from './ReviewModal'
 import CreateNewModal from './CreateNewModal'
 import * as helper from '../core/helper'
 import {Container, fonts, fontSize, colors, media} from '../core/styled'
@@ -31,13 +31,12 @@ const Grid = styled.div`
 class App extends Component {
   render = () => (
     <AppContainer>
-
       <Container>
         <Grid>
+          <CreateNewModal />
           {helper.get().map((item, i) => {
             return <Card data={item} key={`card_${i}`}/>
           })}
-          <CreateNewModal />
         </Grid>
       </Container>
     </AppContainer>
