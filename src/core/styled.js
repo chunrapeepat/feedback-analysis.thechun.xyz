@@ -18,7 +18,7 @@ export const colors = {
 
 // all helper function
 const sizes = {
-  screen: 1680,
+  screen: 1700,
   desktop: 1200,
   tablet: 600,
   phone: 376,

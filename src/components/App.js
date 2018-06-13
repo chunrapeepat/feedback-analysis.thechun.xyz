@@ -1,6 +1,7 @@
 import React, {Component} from 'react'
 import styled from 'styled-components'
 
+import ReviewModal from './ReviewModal'
 import CreateNewModal from './CreateNewModal'
 import {Card, EmptyCard} from './Card'
 import {Container, fonts, fontSize, colors, media} from '../core/styled'
@@ -29,19 +30,23 @@ const Grid = styled.div`
 
 class App extends Component {
   state = {
-    visible: false,
+    createNewModal: false,
+    reviewModal: false,
   }
 
   render = () => (
     <AppContainer>
-      <CreateNewModal visible={this.state.visible}/>
+      <CreateNewModal visible={this.state.createNewModal}/>
+      <ReviewModal visible={this.state.reviewModal}/>
+
       <Container>
         <Grid>
+          <EmptyCard onClick={() => this.setState({createNewModal: true})}/>
+
           <Card></Card>
           <Card></Card>
           <Card></Card>
-          <Card></Card>
-          <EmptyCard onClick={() => this.setState({visible: true})}/>
+          <Card onClick={() => this.setState({reviewModal: true})}/>
         </Grid>
       </Container>
     </AppContainer>
