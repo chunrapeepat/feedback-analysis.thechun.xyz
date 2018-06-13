@@ -58,10 +58,25 @@ const Countdown = styled.div`
   color: ${colors.content};
 `
 
-export const Card = ({...props}) => (
+const Review = styled.span`
+  color: green;
+
+  & i {
+    margin-right: 5px;
+  }
+`
+
+export const Card = ({...props, review}) => (
   <CardContainer {...props}>
     <Header>Stupid Hackathon #2</Header>
-    <Countdown>251 days left</Countdown>
+    <Countdown>
+      {review &&
+        <Review><i className="zmdi zmdi-check-circle"></i> Already reviewed</Review>
+      }
+      {!review &&
+        <span>251 days left</span>
+      }
+    </Countdown>
   </CardContainer>
 )
 

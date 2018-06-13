@@ -45,7 +45,7 @@ class App extends Component {
 
           <Card></Card>
           <Card></Card>
-          <Card></Card>
+          <Card review></Card>
           <Card onClick={() => this.setState({reviewModal: true})}/>
         </Grid>
       </Container>
